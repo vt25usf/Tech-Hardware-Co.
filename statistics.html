@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics - Tech Hardware</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="purchases.html">Purchases</a></li>
+                <li><a href="statistics.html">Statistics</a></li>
+            </ul>
+        </nav>
+        <h1><img src="img/logo.png" alt="Tech Hardware Logo" class="logo"> Tech Hardware Co.</h1>
+        <p>For all your computer hardware needs</p>
+    </header>
+    <div class="container">
+        <h2>CPU Performance Comparison</h2>
+        <canvas id="cpuChart"></canvas>
+        <h2>GPU Performance Comparison</h2>
+        <canvas id="gpuChart"></canvas>
+        <h2>RAM Performance Comparison</h2>
+        <canvas id="ramChart"></canvas>
+        <h2>SSD Performance Comparison</h2>
+        <canvas id="ssdChart"></canvas>
+    </div>
+    <footer>
+        <div class="contact-us">
+            <h2>Contact Us</h2>
+            <form>
+                <input type="text" id="name" name="name" placeholder="Your name"><br>
+                <input type="email" id="email" name="email" placeholder="Your email"><br>
+                <textarea id="message" name="message" placeholder="Your message"></textarea><br>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+        <p>&copy; 2024 Tech Hardware Co. All rights reserved.</p>
+    </footer>
+    <script src="charts.js"></script>
+</body>
+</html>

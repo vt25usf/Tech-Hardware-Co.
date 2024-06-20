@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchases - Tech Hardware</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="purchases.html">Purchases</a></li>
+                <li><a href="statistics.html">Statistics</a></li>
+            </ul>
+        </nav>
+        <h1><img src="img/logo.png" alt="Tech Hardware Logo" class="logo"> Tech Hardware Co.</h1>
+        <p>For all your computer hardware needs</p>
+    </header>
+    <div class="container">
+        <h2>Your Purchases</h2>
+        <div id="purchasesContainer" class="purchases-container">
+            <!-- Purchases will be dynamically added here -->
+        </div>
+        <div id="orderSummary">
+            <h2>Order Summary</h2>
+            <p id="totalAmount">Total: $0</p>
+        </div>
+    </div>
+    <footer>
+        <div class="contact-us">
+            <h2>Contact Us</h2>
+            <form>
+                <input type="text" id="name" name="name" placeholder="Your name"><br>
+                <input type="email" id="email" name="email" placeholder="Your email"><br>
+                <textarea id="message" name="message" placeholder="Your message"></textarea><br>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+        <p>&copy; 2024 Tech Hardware Co. All rights reserved.</p>
+    </footer>
+    <script>
+        let purchases = JSON.parse(localStorage.getItem('purchases')) || [];
+
+        function renderPurchases() {
+            const container = document.getElementById('purchasesContainer');
+            const totalAmountElement = document.getElementById('totalAmount');
+            container.innerHTML = '';
+            let totalAmount = 0;
+            purchases.forEach(purchase => {
+                totalAmount += purchase.price * purchase.quantity;
+                const purchaseElement = document.createElement('div');
+                purchaseElement.className = 'purchase';
+                purchaseElement.innerHTML = `
+                    <div class="purchase-details">
+                        <h3>${purchase.name}</h3>
+                        <p>Price: $${purchase.price}</p>
+                        <p>Quantity: <button onclick="updateQuantity(${purchase.id}, -1)">-</button> ${purchase.quantity} <button onclick="updateQuantity(${purchase.id}, 1)">+</button></p>
+                    </div>
+                    <div class="purchase-actions">
+                        <button onclick="deletePurchase(${purchase.id})">Delete</button>
+                    </div>
+                `;
+                container.appendChild(purchaseElement);
+            });
+            totalAmountElement.textContent = `Total: $${totalAmount}`;
+        }
+
+        function updateQuantity(purchaseId, change) {
+            purchases = purchases.map(purchase => {
+                if (purchase.id === purchaseId) {
+                    return { ...purchase, quantity: purchase.quantity + change };
+                }
+                return purchase;
+            }).filter(purchase => purchase.quantity > 0); // Ensure quantity doesn't go below 1
+            localStorage.setItem('purchases', JSON.stringify(purchases));
+            renderPurchases();
+        }
+
+        function deletePurchase(purchaseId) {
+            purchases = purchases.filter(purchase => purchase.id !== purchaseId);
+            localStorage.setItem('purchases', JSON.stringify(purchases));
+            renderPurchases();
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            renderPurchases();
+        });
+    </script>
+</body>
+</html>

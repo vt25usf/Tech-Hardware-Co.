@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Hardware</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="purchases.html">Purchases</a></li>
+                <li><a href="statistics.html">Statistics</a></li>
+            </ul>
+        </nav>
+        <h1><img src="img/logo.png" alt="Tech Hardware Logo" class="logo"> Tech Hardware Co.</h1>
+        <p>For all your computer hardware needs</p>
+    </header>
+    <div id="home" class="container">
+        <!-- Category: CPUs -->
+        <div class="category" onclick="toggleComponents('cpus')">
+            <h2>CPUs</h2>
+            <img src="img/cpu.jpg" alt="CPU Image">
+        </div>
+        <div id="cpus" class="components">
+            <div class="component">
+                <div class="component-details">
+                    <h3>Intel Core i9</h3>
+                    <p>The Intel Core i9 is a high-performance CPU ideal for gaming and professional applications.</p>
+                    <p class="component-price">Price: $500</p>
+                    <p class="component-rating">Rating: 4/5</p>
+                    <button onclick="addToPurchases('Intel Core i9', 500)">Buy Now</button>
+                </div>
+            </div>
+            <div class="component">
+                <div class="component-details">
+                    <h3>AMD Ryzen 9</h3>
+                    <p>The AMD Ryzen 9 offers excellent multi-core performance for heavy tasks.</p>
+                    <p class="component-price">Price: $450</p>
+                    <p class="component-rating">Rating: 5/5</p>
+                    <button onclick="addToPurchases('AMD Ryzen 9', 450)">Buy Now</button>
+                </div>
+            </div>
+            <div class="component">
+                <div class="component-details">
+                    <h3>Intel Core i7</h3>
+                    <p>Great performance for both gaming and productivity tasks.</p>
+                    <p class="component-price">Price: $350</p>
+                    <p class="component-rating">Rating: 4/5</p>
+                    <button onclick="addToPurchases('Intel Core i7', 350)">Buy Now</button>
+                </div>
+            </div>
+            <div class="component">
+                <div class="component-details">
+                    <h3>AMD Ryzen 7</h3>
+                    <p>Affordable and powerful, perfect for mainstream users.</p>
+                    <p class="component-price">Price: $300</p>
+                    <p class="component-rating">Rating: 4/5</p>
+                    <button onclick="addToPurchases('AMD Ryzen 7', 300)">Buy Now</button>
+                </div>
+            </div>
+            <div class="component">
+                <div class="component-details">
+                    <h3>Intel Core i5</h3>
+                    <p>Great value for everyday computing and light gaming.</p>
+                    <p class="component-price">Price: $200</p>
+                    <p class="component-rating">Rating: 3/5</p>
+                    <button onclick="addToPurchases('Intel Core i5', 200)">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Category: GPUs -->
+        <div class="category" onclick="toggleComponents('gpus')">
+            <h2>GPUs</h2>
+            <img src="img/gpu.jpg" alt="GPU Image">
+        </div>
+        <div id="gpus" class="components">
+            <div class="component">
+                <div class="component-details">
+                    <h3>NVIDIA GeForce RTX 3080</h3>
+                    <p>The NVIDIA GeForce RTX 3080 is a powerful GPU designed for high-end gaming and graphics processing.</p>
+                    <p class="component-price">Price: $700</p>
+                    <p class="component-rating">Rating: 5/5</p>
+                    <button onclick="addToPurchases('NVIDIA GeForce RTX 3080', 700)">Buy Now</button>
+                </div>
+            </div>
+            <div class="component">
+                <div class="component-details">
+                    <h3>AMD Radeon RX 6800 XT</h3>
+                    <p>Excellent performance for high-resolution gaming and content creation.</p>
+                    <p class="component-price">Price: $650</p>
+                    <p class="component-rating">Rating: 4/5</p>
+                    <button onclick="addToPurchases('AMD Radeon RX 6800 XT', 650)">Buy Now</button>
+                </div>
+            </div>
+            <div class="component">
+                <div class="component-details">
+                    <h3>NVIDIA GeForce RTX 3060</h3>
+                    <p>Great performance for 1440p gaming at an affordable price.</p>
+                    <p class="component-price">Price: $400</p>
+                    <p class="component-rating">Rating: 4/5</p>
+                    <button onclick="addToPurchases('NVIDIA GeForce RTX 3060', 400)">Buy Now</button>
+                </div>
+            </div>
+            <div class="component">
+                <div class="component-details">
+                    <h3>AMD Radeon RX 6700 XT</h3>
+                    <p>Strong performance for 1440p and 1080p gaming.</p>
+                    <p class="component-price">Price: $480</p>
+                    <p class="component-rating">Rating: 4/5</p>
+                    <button onclick="addToPurchases('AMD Radeon RX 6700 XT', 480)">Buy Now</button>
+                </div>
+            </div>
+            <div class="component">
+                <div class="component-details">
+                    <h3>NVIDIA GeForce GTX 1660 Super</h3>
+                    <p>Good performance for 1080p gaming at an affordable price.</p>
+                    <p class="component-price">Price: $250</p>
+                    <p class="component-rating">Rating: 3/5</p>
+                    <button onclick="addToPurchases('NVIDIA GeForce GTX 1660 Super', 250)">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Category: RAMs -->
+        <div class="category" onclick="toggleComponents('rams')">
+            <h2>RAMs</h2>
+            <img src="img/ram.jpg" alt="RAM Image">
+        </div>
+        <div id="rams" class="components">
+            <div class="component">
+                <div class="component-details">
+                    <h3>Corsair Vengeance LPX 16GB</h3>
+                    <p>High-performance RAM designed for overclocking.</p>
+                    <p class="component-price">Price: $100</p>
+                    <p class="component-rating">Rating: 5/5</p>
+                    <button onclick="addToPurchases('Corsair Vengeance LPX 16GB', 100)">Buy Now</button>
+                </div>
+            </div>
+            <div class="component">
+                <div class="component-details">
+                    <h3>G.Skill Trident Z RGB 32GB</h3>
+                    <p>High-performance RAM with stylish RGB lighting.</p>
+                    <p class="component-price">Price: $250</p>
+                    <p class="component-rating">Rating: 5/5</p>
+                    <button onclick="addToPurchases('G.Skill Trident Z RGB 32GB', 250)">Buy Now</button>
+                </div>
+            </div>
+            <div class="component">
+                <div class="component-details">
+                    <h3>Kingston HyperX Fury 16GB</h3>
+                    <p>Reliable and affordable RAM for everyday use.</p>
+                    <p class="component-price">Price: $120</p>
+                    <p class="component-rating">Rating: 4/5</p>
+                    <button onclick="addToPurchases('Kingston HyperX Fury 16GB', 120)">Buy Now</button>
+                </div>
+            </div>
+            <div class="component">
+                <div class="component-details">
+                    <h3>Crucial Ballistix 32GB</h3>
+                    <p>High-capacity RAM ideal for multitasking and heavy applications.</p>
+                    <p class="component-price">Price: $220</p>
+                    <p class="component-rating">Rating: 4/5</p>
+                    <button onclick="addToPurchases('Crucial Ballistix 32GB', 220)">Buy Now</button>
+                </div>
+            </div>
+            <div class="component">
+                <div class="component-details">
+                    <h3>Patriot Viper Steel 16GB</h3>
+                    <p>Durable and high-speed RAM for gamers and enthusiasts.</p>
+                    <p class="component-price">Price: $130</p>
+                    <p class="component-rating">Rating: 4/5</p>
+                    <button onclick="addToPurchases('Patriot Viper Steel 16GB', 130)">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Category: SSDs -->
+        <div class="category" onclick="toggleComponents('ssds')">
+            <h2>SSDs</h2>
+            <img src="img/ssd.jpg" alt="SSD Image">
+        </div>
+        <div id="ssds" class="components">
+            <div class="component">
+                <div class="component-details">
+                    <h3>Samsung 970 EVO 1TB</h3>
+                    <p>The Samsung 970 EVO 1TB SSD offers fast read and write speeds, making it ideal for quick data access.</p>
+                    <p class="component-price">Price: $200</p>
+                    <p class="component-rating">Rating: 5/5</p>
+                    <button onclick="addToPurchases('Samsung 970 EVO 1TB', 200)">Buy Now</button>
+                </div>
+            </div>
+            <div class="component">
+                <div class="component-details">
+                    <h3>WD Black SN750 1TB</h3>
+                    <p>High-performance NVMe SSD for gaming and professional use.</p>
+                    <p class="component-price">Price: $180</p>
+                    <p class="component-rating">Rating: 4/5</p>
+                    <button onclick="addToPurchases('WD Black SN750 1TB', 180)">Buy Now</button>
+                </div>
+            </div>
+            <div class="component">
+                <div class="component-details">
+                    <h3>Crucial P1 1TB</h3>
+                    <p>Reliable SSD with good performance for everyday computing.</p>
+                    <p class="component-price">Price: $150</p>
+                    <p class="component-rating">Rating: 4/5</p>
+                    <button onclick="addToPurchases('Crucial P1 1TB', 150)">Buy Now</button>
+                </div>
+            </div>
+            <div class="component">
+                <div class="component-details">
+                    <h3>Kingston A2000 1TB</h3>
+                    <p>Affordable NVMe SSD with good read/write speeds.</p>
+                    <p class="component-price">Price: $140</p>
+                    <p class="component-rating">Rating: 4/5</p>
+                    <button onclick="addToPurchases('Kingston A2000 1TB', 140)">Buy Now</button>
+                </div>
+            </div>
+            <div class="component">
+                <div class="component-details">
+                    <h3>ADATA XPG SX8200 Pro 1TB</h3>
+                    <p>Excellent performance and durability for high-demand applications.</p>
+                    <p class="component-price">Price: $170</p>
+                    <p class="component-rating">Rating: 4/5</p>
+                    <button onclick="addToPurchases('ADATA XPG SX8200 Pro 1TB', 170)">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="contact-us">
+            <h2>Contact Us</h2>
+            <form>
+                <input type="text" id="name" name="name" placeholder="Your name"><br>
+                <input type="email" id="email" name="email" placeholder="Your email"><br>
+                <textarea id="message" name="message" placeholder="Your message"></textarea><br>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+        <p>&copy; 2024 Tech Hardware Co. All rights reserved.</p>
+    </footer>
+    <div id="popupMessage">Added to cart</div>
+    <script>
+        function toggleComponents(categoryId) {
+            var components = document.getElementById(categoryId);
+            if (components.style.display === "none" || components.style.display === "") {
+                components.style.display = "block";
+            } else {
+                components.style.display = "none";
+            }
+        }
+
+        let purchases = JSON.parse(localStorage.getItem('purchases')) || [];
+
+        function addToPurchases(productName, productPrice) {
+            // Check if the product is already in the purchases list
+            const existingProduct = purchases.find(purchase => purchase.name === productName);
+            if (existingProduct) {
+                showPopupMessage('Already in cart');
+                return;
+            }
+            
+            const purchase = {
+                id: new Date().getTime(),
+                name: productName,
+                price: productPrice,
+                quantity: 1
+            };
+            purchases.push(purchase);
+            localStorage.setItem('purchases', JSON.stringify(purchases));
+            showPopupMessage('Added to cart');
+        }
+
+        function showPopupMessage(message) {
+            const popup = document.getElementById('popupMessage');
+            popup.textContent = message;
+            popup.style.display = 'block';
+            setTimeout(() => {
+                popup.style.display = 'none';
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
